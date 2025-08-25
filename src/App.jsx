@@ -103,7 +103,7 @@ function App() {
           You can also use this project directly inside Gmail using our Chrome Extension.
         </Typography>
         <Link 
-          href="https://github.com/your-username/email-reply-extension" 
+          href="https://github.com/Dynamight24/Email-Writer-Extension" 
           target="_blank" 
           rel="noopener" 
           underline="hover"
