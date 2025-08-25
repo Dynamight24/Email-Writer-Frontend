@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import { Box, Button, CircularProgress, Container, FormControl, Input, InputLabel, MenuItem, Select, TextField, Typography } from '@mui/material';
+import { Box, Button, CircularProgress, Container, FormControl, InputLabel, MenuItem, Select, TextField, Typography, Link, Paper, List, ListItem, ListItemText } from '@mui/material';
 import axios from 'axios';
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
       });
       setGeneratedReply(typeof response.data === 'string' ? response.data : JSON.stringify(response.data));
     } catch (error) {
-      setError('Failed to generate eamil reply. Please try again');
+      setError('Failed to generate email reply. Please try again');
       console.error(error);
     } finally {
       setLoading(false);
@@ -93,8 +93,49 @@ function App() {
         </Button>
        </Box> 
       )}
+
+      {/* Extension Info Section */}
+      <Paper sx={{ mt: 5, p: 3 }} elevation={3}>
+        <Typography variant="h5" gutterBottom>
+          🚀 Check out the Email Reply Assistant Extension
+        </Typography>
+        <Typography variant="body1" gutterBottom>
+          You can also use this project directly inside Gmail using our Chrome Extension.
+        </Typography>
+        <Link 
+          href="https://github.com/your-username/email-reply-extension" 
+          target="_blank" 
+          rel="noopener" 
+          underline="hover"
+          sx={{ fontWeight: "bold", color: "primary.main" }}
+        >
+          👉 View on GitHub
+        </Link>
+
+        <Typography variant="h6" sx={{ mt: 3 }}>
+          Installation Steps:
+        </Typography>
+        <List>
+          <ListItem>
+            <ListItemText primary="1. Download the extension code from GitHub." />
+          </ListItem>
+          <ListItem>
+            <ListItemText primary="2. Store it in a folder on your computer." />
+          </ListItem>
+          <ListItem>
+            <ListItemText primary="3. Open Chrome → Extensions → Enable Developer Mode." />
+          </ListItem>
+          <ListItem>
+            <ListItemText primary="4. Click on 'Load Unpacked' and select the extension folder." />
+          </ListItem>
+          <ListItem>
+            <ListItemText primary="5. Now you can use the Email Reply Assistant inside Gmail!" />
+          </ListItem>
+        </List>
+      </Paper>
     </Container>
   )
 }
 
 export default App
+
