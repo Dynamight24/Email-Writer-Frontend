@@ -1,0 +1,64 @@
+/* App.css */
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  min-height: 200vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.MuiContainer-root {
+  background: #ffffff;
+  padding: 2rem !important;
+  border-radius: 50px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  margin-top: 40px;
+}
+
+h1 {
+  font-weight: 600;
+  text-align: center;
+  color: #021223; /* MUI primary color */
+}
+
+.MuiTextField-root {
+  background: #fafafa;
+  border-radius: 8px;
+}
+
+.MuiButton-root {
+  border-radius: 10px !important;
+  text-transform: none !important;
+  font-weight: 600 !important;
+  cursor: pointer;
+}
+
+.MuiButton-contained {
+  background: #19d225 !important;
+  color: white !important;
+  cursor: pointer;
+}
+
+.MuiButton-contained:hover {
+  background: #059f64 !important;
+}
+
+.MuiButton-outlined {
+  border-color: #035d0d !important;
+  color: #145304 !important;
+}
+
+.MuiButton-outlined:hover {
+  background: rgba(25, 118, 210, 0.1) !important;
+}
+
+.generated-box {
+  margin-top: 20px;
+  padding: 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  background: #fafafa;
+}
